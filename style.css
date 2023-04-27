@@ -1,0 +1,155 @@
+:root {
+    --lightBg: #eeeeee;
+    --darkBg: #000;
+    --hours: #ff5958;
+    --minutes: #ffad5a;
+    --seconds: #4f9da5;
+    --letter: #7b83fd;
+}
+
+@font-face {
+    font-family: digital;
+    src: url(digital-7.mono.ttf);
+  }
+
+.light-mode {
+    --background-color: var(--lightBg);
+    --darkModeButton-bgcolor: var(--darkBg);
+    --color: var(--lightBg);
+    --text-color:var(--darkBg);
+}
+
+.dark-mode {
+    --background-color: var(--darkBg);
+    --darkModeButton-bgcolor: var(--lightBg);
+    --color: var(--darkBg);
+    --text-color: var(--lightBg);
+}
+
+html, body {
+    background-color: var(--background-color);
+    font-family: digital;
+    height: 99%;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    font-size: 250px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    color: var(--text-color);
+}
+
+.timer{
+    display: flex;
+}
+
+#hours{
+    color: var(--hours);
+}
+
+#minutes{
+    color: var(--minutes);
+}
+
+#seconds{
+    color: var(--seconds);
+}
+
+
+.colon{
+    display: block;
+    color: var(--text-color);
+}
+
+.letter{
+    display: none;
+    color: var(--text-color);
+}
+
+
+.event-buttons{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.button-start{
+    height: 25vh;
+    width: 33%;
+    background-color: var(--hours);
+    color: var(--color);
+    border: none;
+    opacity: 0;
+}
+
+.button-start:hover{
+    opacity: 1;
+    transition: 0.6s;
+}
+
+.button-stop{
+    height: 25vh;
+    width: 33%;
+    background-color: var(--minutes);
+    color: var(--color);
+    border: none;
+    opacity: 0;
+}
+
+.button-stop:hover{
+    opacity: 1;
+    transition: 0.6s;
+}
+
+.button-reset{
+    height: 25vh;
+    width: 33%;
+    background-color: var(--seconds);
+    color: var(--color);
+    border: none;
+    opacity: 0;
+}
+
+.button-reset:hover{
+    opacity: 1;
+    transition: 0.6s;
+}
+
+.dark-mode-button {
+    height: 25vh;
+    width: 33%;
+    background-color: var(--darkModeButton-bgcolor);
+    color: var(--color);
+    border: none;
+    opacity: 0;
+    font-size:xx-large;
+}
+
+.dark-mode-button:hover{
+    opacity: 1;
+    transition: 0.6s;
+}
+
+@media screen and (max-width: 1365px){
+    .container{
+        font-size: 150px;
+        flex-direction: column;
+        gap: 50px;
+    }
+    .colon{
+        display: none;
+    }
+    .letter{
+        display: block;
+    }
+}

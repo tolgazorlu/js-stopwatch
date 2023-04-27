@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stopwatch</title>
+
+    <!-- ICONS -->
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.1/css/all.css"
+    />
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- SCRIPT -->
+
+    <script src="index.js"></script>
+  </head>
+  <body class="light-mode">
+    <div class="container">
+      <div class="timer">
+        <span id="hours">00</span><span class="colon">:</span><span class="letter">h</span>
+      </div>
+      <div class="timer">
+        <span id="minutes">00</span><span class="colon">:</span><span class="letter">m</span>
+      </div>
+      <div class="timer">
+        <span id="seconds">00</span><span class="letter">s</span>
+      </div>
+      
+    </div>
+
+    <div class="event-buttons">
+      <button id="start" class="button-start"><h1>Start</h1></button>
+      <button id="pause" class="button-stop"><h1>Stop</h1></button>
+      <button id="reset" class="button-reset"><h1>Reset</h1></button>
+      <button onclick="darkMode()" class="dark-mode-button">
+        <i class="fas fa-adjust"></i>
+      </button>
+    </div>
+  </body>
+</html>
