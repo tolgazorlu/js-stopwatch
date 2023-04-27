@@ -97,9 +97,9 @@ window.onload = function (){
     delta = 0;
     elapsedTime = 0;
     clearInterval(timer);
-    appendHours.innerHTML = "01";
-    appendMinutes.innerHTML = "25";
-    appendSeconds.innerHTML = "04";
+    appendHours.innerHTML = "00";
+    appendMinutes.innerHTML = "00";
+    appendSeconds.innerHTML = "00";
   };
 }
 
